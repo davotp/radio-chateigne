@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radio Châtaigne</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+  <nav class="menu">
+    <a onclick="showSection('radio')">🎙️ Radio Châtaigne</a>
+    <a onclick="showSection('videos')">📽️ Davot Production</a>
+    <a onclick="showSection('blagues')">😅 Blagues de Baby D</a>
+  </nav>
+</div>
+
+<!-- BOUTON FLOTTANT POUR RÉOUVRIR -->
+<button class="open-sidebar-btn" onclick="toggleSidebar()">☰</button>
+
+<!-- SECTION RADIO -->
+<div class="content active" id="radio">
+
+  <div class="radio-logo">
+    <img src="logo-radio-chataigne.png" alt="Logo Radio Châtaigne" class="logo-radio">
+  </div>
+
+  <div class="podcast-grid">
+
+    <div class="player-box">
+      <img class="episode-image" src="https://dl.dropboxusercontent.com/scl/fi/awpuqag6t3ppigocyfsvg/InShot_20260131_193314151.jpg?rlkey=gjryhxezpf8bazgcoc1fqrqqb&st=4idvra4j" alt="">
+      <h2 class="la chansson des 🥔🥔🥔 par Reidar">la chansson des 🥔🥔🥔 </h2>
+      <p class="episode-description"></p>
+      <button class="play-button" onclick="playAudio(1)">▶️ Écouter</button>
+      <audio id="audio1" controls>
+        <source src="https://dl.dropboxusercontent.com/scl/fi/ogp3tggo28gjoh6q8x7j2/la-chansson-des-par-Reidar.m4a?rlkey=zile605pzz4qtuk0cp64c40k8&st=114bdc0f" type="audio/mp4">
+      </audio>
+    </div>
+
+        <div class="player-box">
+      <img class="episode-image" src="https://dl.dropboxusercontent.com/scl/fi/k9eixiibkaicgenas3r82/InShot_20260201_132411142.jpg?rlkey=v4bisd05ggpzku8x2n36e73mo&st=fqlvggd4&dl=1" alt="">
+      <h2 class="la chansson des 🥔🥔🥔 par Reidar">l'histoire d'arthur qui aimmait les 🥔🥔🥔</h2>
+      <p class="episode-description"></p>
+      <button class="play-button" onclick="playAudio(1)">▶️ Écouter</button>
+      <audio id="audio1" controls>
+        <source src="https://dl.dropboxusercontent.com/scl/fi/fxx7xcyydsmjjpdz4hvry/l-histoire-d-Arthur-qui-aime-les-Par-Raidar.m4a?rlkey=txtg3czkae2qaqveyn16hr0qk&st=ueq7wnu4&dl=1" type="audio/mp4">
+      </audio>
+    </div>
+
+            <div class="player-box">
+      <img class="episode-image" src="https://dl.dropboxusercontent.com/scl/fi/gpyrd8wvqufdvhuym91ak/l-histoire-d-Arthur-qui-aimait-les-burgers.png?rlkey=3l5poxzwtt2kd0oo5ih9mecpc&st=xalnppfq&dl=1" alt="">
+      <h2 class="la chansson des 🥔🥔🥔 par Reidar">l'histoire d'arthur qui aimmait les 🍔🍔🍔</h2>
+      <p class="episode-description"></p>
+      <button class="play-button" onclick="playAudio(1)">▶️ Écouter</button>
+      <audio id="audio1" controls>
+        <source src="https://dl.dropboxusercontent.com/scl/fi/ojdjmkjks4y6pj0hdlk75/L-histoire-d-Arthur-qui-aimait-les-burgers-par-Reidar.m4a?rlkey=fe25skbudyh55hisctbwp36gu&st=bz75nj0b&dl=1" type="audio/mp4">
+      </audio>
+    </div>
+
+            <div class="player-box">
+      <img class="episode-image" src="https://dl.dropboxusercontent.com/scl/fi/2e1fvag0to86j336i0w98/la-pat-e-de-chateigne.png?rlkey=ewgc2zyuhch8342nryyldwqrp&st=tnduigcv&dl=1" alt="">
+      <h2 class="la chansson des 🥔🥔🥔 par Reidar">la paté de 🐈‍⬛chateigne🐈‍⬛</h2>
+      <p class="episode-description"></p>
+      <button class="play-button" onclick="playAudio(1)">▶️ Écouter</button>
+      <audio id="audio1" controls>
+        <source src="https://dl.dropboxusercontent.com/scl/fi/h8kcaecm2zu3ok4nbyumd/la-pat-de-chateigne-par-Arthur.m4a?rlkey=4xz8i6994d84zlmai8fs9iovc&st=xces6ezs&dl=1" type="audio/mp4">
+      </audio>
+    </div>
+
+                <div class="player-box">
+      <img class="episode-image" src="https://dl.dropboxusercontent.com/scl/fi/auuyonow1cjafh9py40nv/l-histoire-de-MCzonzon_png.png?rlkey=nzfkzpfjrsvicu6fw67gltfnw&st=3xae21en&dl=1" alt="">
+      <h2 class="la chansson des 🥔🥔🥔 par Reidar">l'hisoitre de MCzonzon</h2>
+      <p class="episode-description"></p>
+      <button class="play-button" onclick="playAudio(1)">▶️ Écouter</button>
+      <audio id="audio1" controls>
+        <source src="https://dl.dropboxusercontent.com/scl/fi/r9fggxok0fmnoi7qu3vyb/L-histoire-de-MCzonzon-par-Arthur.m4a?rlkey=j8nvtyxcvc4nh3p7b4ey8faet&st=bvu4sb6v&dl=1" type="audio/mp4">
+      </audio>
+    </div>
+
+                    <div class="player-box">
+      <img class="episode-image" src="https://dl.dropboxusercontent.com/scl/fi/oixmakkjnpjprsgx1pne9/l-histoire-de-chateigne_png.png?rlkey=6sahk2b4dohn8nthyr4nduzsf&st=a1tu7jep&dl=1" alt="">
+      <h2 class="la chansson des 🥔🥔🥔 par Reidar">l'histoire de 🐈‍⬛chateigne🐈‍⬛</h2>
+      <p class="episode-description"></p>
+      <button class="play-button" onclick="playAudio(1)">▶️ Écouter</button>
+      <audio id="audio1" controls>
+        <source src="https://dl.dropboxusercontent.com/scl/fi/tc5n0w4sail5m4w54947z/l-histoire-de-chateigne-par-reidar.m4a?rlkey=n6majg9gzp8z65w1wrr6irpbl&st=m22pauc6&dl=1" type="audio/mp4">
+      </audio>
+    </div>
+
+                        <div class="player-box">
+      <img class="episode-image" src="https://dl.dropboxusercontent.com/scl/fi/017ms11kp0gzm5y5xokjy/l-histoire-de-raidar-qui-a-cass-des-l-gos_png-1.png?rlkey=0gslre3sfq26w4tqgriijezoo&st=z2mynmy7&dl=1" alt="">
+      <h2 class="la chansson des 🥔🥔🥔 par Reidar">l'histoire de raidar qui a cassé des légos</h2>
+      <p class="episode-description"></p>
+      <button class="play-button" onclick="playAudio(1)">▶️ Écouter</button>
+      <audio id="audio1" controls>
+        <source src="https://dl.dropboxusercontent.com/scl/fi/bvfco8upqnt9l4cy0fpdy/l-hisoire-de-ridar-qui-a-cass-des-l-gos-Par-Arthur.m4a?rlkey=hskac4jrlqqdln8q4209w33ky&st=mv6k7qam&dl=1" type="audio/mp4">
+      </audio>
+    </div>
+
+                        <div class="player-box">
+      <img class="episode-image" src="https://dl.dropboxusercontent.com/scl/fi/aq84ikazzpq897jmx1wxr/l-histoire-d-Arthur-qui-aimait-tout-les-jouets-du-monde_png.png?rlkey=3jxpu9eq80xjy3ep1i3427ksb&st=5053eopr&dl=1" alt="">
+      <h2 class="la chansson des 🥔🥔🥔 par Reidar">l'histoire d'Arthur qui aimait tout les jouets du monde</h2>
+      <p class="episode-description"></p>
+      <button class="play-button" onclick="playAudio(1)">▶️ Écouter</button>
+      <audio id="audio1" controls>
+        <source src="https://dl.dropboxusercontent.com/scl/fi/id3v60kb3435l0qmli1l0/l-histoire-d-Arthur-qui-aimait-tous-les-jouets-du-monde-Par-Raidar.m4a?rlkey=ynu2ylehhikifn8ibgt5tm8dy&st=80l5zmez&dl=1" type="audio/mp4">
+      </audio>
+    </div>
+    
+                            <div class="player-box">
+      <img class="episode-image" src="https://dl.dropboxusercontent.com/scl/fi/g4t1s4u5wcfkk42wqf74s/OIP-1.webp?rlkey=zsr0l2gbxtc9dh6ovudebfe9a&st=og16k97b&dl=1" alt="">
+      <h2 class="la chansson des 🥔🥔🥔 par Reidar">BONUS⭐⭐⭐🤩🤩🤩la chateigne s'exprime</h2>
+      <p class="episode-description"></p>
+      <button class="play-button" onclick="playAudio(1)">▶️ Écouter</button>
+      <audio id="audio1" controls>
+        <source src="https://dl.dropboxusercontent.com/scl/fi/0sdb2ctrvjqg600a0fa8y/BONUS-La-Chateigne-s-exprime-par-Lilou-le-chat.m4a?rlkey=myynhioh3gk7ji55auog0iibg&st=ygtcpw87&dl=1" type="audio/mp4">
+      </audio>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION DAVOT PRODUCTION -->
+<div class="content" id="videos">
+
+  <div class="davot-logo">
+    <img src="davot-logo.jpg" class="logo-davot" alt="Logo Davot Production">
+  </div>
+
+  <div class="video-grid">
+
+    <div class="video-card">
+      <img src="https://dl.dropboxusercontent.com/scl/fi/ewq3evzl9vb5ts3mp4qco/Capture-d-cran-2026-02-06-193703.png?rlkey=b6jikno99jpeo32d3csjl60ck&st=ljfg16mm&dl=1" class="video-thumb" alt="">
+      <h2 class="video-title">en plein délire 🤣🤣🤣</h2>
+      <p class="video-description"></p>
+      <button class="video-button" onclick="playVideo('https://dl.dropboxusercontent.com/scl/fi/q4wqfaff5crrkrbg6tkhx/drole2.0.mp4?rlkey=o8wyhuwqe18ntmda98erszxw6&st=yw8tpfc2')">▶️ Regarder</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION BLAGUES -->
+<div class="content" id="blagues">
+
+  <div class="blagues-logo">
+    <img src="blagues-logo.jpg" alt="Logo Blagues de Baby D" class="logo-blagues">
+  </div>
+
+  <div class="blague-grid">
+
+    <div class="blague-card"><img src="https://dl.dropboxusercontent.com/scl/fi/kt571wh4jmqulpfu0gokh/1766080626115.jpg?rlkey=ixscxx9ipsr52hcq26st3kx93&st=o2rv1vho" class="blague-image" onclick="zoomBlague('https://dl.dropboxusercontent.com/scl/fi/kt571wh4jmqulpfu0gokh/1766080626115.jpg?rlkey=ixscxx9ipsr52hcq26st3kx93&st=o2rv1vho')"></div>
+    <div class="blague-card"><img src="blague2.png" class="blague-image" onclick="zoomBlague('blague2.png')"></div>
+    <div class="blague-card"><img src="blague3.png" class="blague-image" onclick="zoomBlague('blague3.png')"></div>
+
+    <!-- Continue jusqu’à blague30.png -->
+  </div>
+
+</div>
+
+<!-- POPUP ZOOM BLAQUE -->
+<div id="blaguePopup" class="blague-popup">
+  <span class="close-blague" onclick="closeBlaguePopup()">✖</span>
+  <img id="popupBlagueImage" src="" alt="">
+</div>
+
+<script src="script.js"></script>
+</body>
+<div id="zoom-container" onclick="closeZoom()">
+  <img id="zoom-image" src="">
+</div>
+
+</html>

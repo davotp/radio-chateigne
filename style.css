@@ -1,0 +1,328 @@
+/* --- GLOBAL --- */
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 100%;
+  background: rgba(20, 20, 35, 0.6);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 70px;
+  transform: translateX(0);
+  transition: transform 0.35s ease;
+  z-index: 1000;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 25px;
+  color: #e0e0ff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  padding-left: 35px;
+}
+
+/* --- TOGGLE BUTTON --- */
+.toggle-btn,
+.open-sidebar-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: #6c4eb6;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(108, 78, 182, 0.5);
+  transition: 0.25s;
+  z-index: 1100;
+}
+
+.open-sidebar-btn {
+  display: none;
+}
+
+.toggle-btn:hover,
+.open-sidebar-btn:hover {
+  background: #8a6ff0;
+  transform: scale(1.05);
+}
+
+/* --- CONTENT --- */
+.content {
+  display: none;
+  margin-left: 260px;
+  padding: 30px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease, margin-left 0.35s ease;
+}
+
+.content.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content.full-width {
+  margin-left: 20px;
+}
+
+/* --- LOGO RADIO --- */
+.radio-logo {
+  text-align: center;
+  margin: 30px 0 10px;
+}
+
+.radio-logo img {
+  max-width: 220px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.radio-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* --- PODCAST GRID --- */
+.podcast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* --- PLAYER BOX --- */
+.player-box {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+  animation: fadeUp 0.7s ease forwards;
+  opacity: 0;
+}
+
+.player-box:hover {
+  transform: translateY(-5px);
+}
+
+/* --- IMAGE PODCAST --- */
+.episode-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+/* --- TITRE & DESCRIPTION --- */
+.episode-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.episode-description {
+  color: #cfcfe8;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+/* --- BOUTON ÉCOUTER --- */
+.play-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #6c4eb6, #8a6ff0);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: 0.25s;
+}
+
+.play-button:hover {
+  transform: scale(1.05);
+}
+
+/* --- VIDÉOS --- */
+.logo-davot {
+  max-width: 130px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.video-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+  animation: fadeUp 0.7s ease forwards;
+  opacity: 0;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-thumb {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.video-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #6c4eb6, #8a6ff0);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: 0.25s;
+}
+
+.video-button:hover {
+  transform: scale(1.05);
+}
+
+/* --- BLAQUES DE BABY D --- */
+.blague-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.blague-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  padding: 15px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+  animation: fadeUp 0.7s ease forwards;
+  opacity: 0;
+}
+
+.blague-card:hover {
+  transform: translateY(-5px);
+}
+
+.blague-image {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* --- POPUP ZOOM --- */
+.blague-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(6px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.blague-popup img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.2);
+}
+
+.close-blague {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  background: #ff4d4d;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(255,0,0,0.6);
+  z-index: 3100;
+}
+
+/* --- LOGO BLAGUES (FIXÉ) --- */
+.logo-blagues {
+  width: 130px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  object-fit: contain;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(25px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+#zoom-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#zoom-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}

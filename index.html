@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accès Radio Châtaigne</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .box {
+      background: #222;
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #ffcc00;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #error {
+      color: red;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h2>🔐 Accès sécurisé</h2>
+    <p>Entrez le mot de passe</p>
+
+    <input type="password" id="password" placeholder="Mot de passe">
+    <button onclick="check()">Entrer</button>
+
+    <p id="error">❌ Mot de passe incorrect</p>
+  </div>
+
+  <script>
+    function check() {
+      const pass = document.getElementById("password").value;
+
+      // 👉 Mets ton mot de passe ici
+      const correct = "patate123";
+
+      if (pass === correct) {
+        // 👉 Redirection vers ton vrai site
+        window.location.href = "site.html";
+      } else {
+        document.getElementById("error").style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
